@@ -1,0 +1,20 @@
+{
+  "name": "cyber-terminal-pro",
+  "version": "2.0.0",
+  "description": "Cyber Terminal Pro - Enhanced Edition",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "css-loader": "^6.11.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.86.0",
+    "sass-loader": "^13.3.3",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
+}

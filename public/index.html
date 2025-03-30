@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="matrix">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Terminal Pro</title>
+  <link rel="stylesheet" href="/dist/main.css">
+  <link rel="preload" href="/assets/fonts/FiraCode.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <div id="game-container">
+    <div id="terminal-container">
+      <div class="terminal-header">
+        <div class="title-bar">
+          <span class="logo">CTP</span>
+          <span class="version">v2.0.1</span>
+          <div class="status-icons">
+            <span id="connection-status">● ONLINE</span>
+            <span id="security-status">🔒 SECURE</span>
+          </div>
+        </div>
+      </div>
+      
+      <div id="terminal-output" aria-live="polite"></div>
+      
+      <div class="input-group">
+        <span class="prompt">user@cyberterm:~$</span>
+        <input 
+          id="terminal-input" 
+          type="text" 
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          aria-label="Terminal command input"
+        >
+      </div>
+    </div>
+
+    <div id="game-hud">
+      <div class="hud-section">
+        <div class="hud-item">
+          <span class="hud-label">LEVEL</span>
+          <span id="hud-level" class="hud-value">1</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">XP</span>
+          <span id="hud-xp" class="hud-value">0/1000</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">CREDITS</span>
+          <span id="hud-credits" class="hud-value">0</span>
+        </div>
+      </div>
+      <div id="active-missions"></div>
+    </div>
+  </div>
+
+  <audio id="sfx-levelup" src="/assets/sounds/levelup.mp3"></audio>
+  <audio id="sfx-achievement" src="/assets/sounds/achievement.mp3"></audio>
+  <audio id="sfx-error" src="/assets/sounds/error.mp3"></audio>
+  <audio id="sfx-typing" src="/assets/sounds/typing.mp3"></audio>
+
+  <script src="/dist/bundle.js" type="module"></script>
+</body>
+</html>

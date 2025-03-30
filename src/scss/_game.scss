@@ -1,0 +1,62 @@
+#game-hud {
+  flex: 1;
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  overflow-y: auto;
+  
+  .hud-section {
+    margin-bottom: 1.5rem;
+    
+    .hud-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid rgba($accent-color, 0.2);
+      
+      .hud-label {
+        color: $accent-color;
+      }
+      
+      .hud-value {
+        font-weight: bold;
+      }
+    }
+  }
+  
+  #active-missions {
+    .mission-item {
+      background: rgba(0, 20, 30, 0.5);
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-left: 3px solid $accent-color;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem;
+  background: rgba(0, 30, 30, 0.9);
+  border: 1px solid $accent-color;
+  border-radius: 4px;
+  animation: slideIn 0.3s ease-out;
+  
+  &.error {
+    border-color: $error-color;
+    background: rgba(30, 0, 0, 0.9);
+  }
+  
+  &.success {
+    border-color: #55ff55;
+    background: rgba(0, 30, 0, 0.9);
+  }
+  
+  &.level-up {
+    animation: pulse 1s infinite, slideIn 0.3s ease-out;
+  }
+}
